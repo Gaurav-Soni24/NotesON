@@ -1,0 +1,25 @@
+.resultCard{
+    height: auto;
+    width: 390px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+}
+.resultCard h1{
+    font-size: 1.8vmax;
+}
+@media (max-width : 1000px) {
+    .resultCard h1{
+        font-size: 2.3vmax;
+    }
+}
+@media (max-width : 750px) {
+    .resultCard h1{
+        font-size: 3vmax;
+    }
+}
+@media (max-width : 500px) {
+    .resultCard{
+        width: 79%;
+    }
+}
