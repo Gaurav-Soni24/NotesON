@@ -96,6 +96,7 @@
         display: none;
     }
     .info{
+        width: 70%;
         transform: none;
     }
 }
