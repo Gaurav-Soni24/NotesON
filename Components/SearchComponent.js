@@ -4,13 +4,14 @@ import SearchResult from './SearchResult';
 import './Style/SearchComponent.css';
 import 'remixicon/fonts/remixicon.css';
 import topSearch from './TopSearch.js';
-import './Style/Buttons.css'
+import './Style/Buttons.css';
 
 const SearchComponent = ({ data }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [noResults, setNoResults] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
+  const [isSearching, setIsSearching] = useState(false);
 
   const handleSearch = (searchQuery) => {
     const filteredResults = data.filter(item =>
@@ -19,6 +20,7 @@ const SearchComponent = ({ data }) => {
     setResults(filteredResults);
     setNoResults(filteredResults.length === 0);
     setShowButtons(false); // Hide buttons when search is performed
+    setIsSearching(true); // Set searching state to true
   };
 
   const handleSubmit = (e) => {
@@ -32,6 +34,10 @@ const SearchComponent = ({ data }) => {
     handleSearch(buttonQuery);
   };
 
+  const handleClearSearch = () => {
+    window.location.reload();
+  };
+
   return (
     <div className='search-body'>
       <form onSubmit={handleSubmit} className='form'>
@@ -42,9 +48,15 @@ const SearchComponent = ({ data }) => {
           placeholder="Search..."
           className='input'
         />
-        <button type="submit" className='seach-icon'>
-          <i className="ri-search-line"></i>
-        </button>
+        {isSearching ? (
+          <button type="button" onClick={handleClearSearch} className='search-icon'>
+            <i className="ri-close-line"></i>
+          </button>
+        ) : (
+          <button type="submit" className='search-icon'>
+            <i className="ri-search-line"></i>
+          </button>
+        )}
       </form>
       {showButtons && (
         <div className='buttons'>

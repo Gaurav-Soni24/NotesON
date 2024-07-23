@@ -19,7 +19,7 @@
     padding: 9px;
     font-size: 20px;
 }
-.seach-icon{
+.search-icon{
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -28,7 +28,7 @@
     background-color: black;
 }
 
-.seach-icon i{
+.search-icon i{
     font-size: 15px;
     font-weight: 1200;
     color: white;
