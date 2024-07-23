@@ -1,13 +1,14 @@
 const topSearch = [
-    { Text: "Maths" },
+    { Text: "Maths-1" },
     { Text: "BEEE" },
-    { Text: "Mathematics-2" },
-    { Text: "Engineering" },
+    { Text: "Maths-2" },
+    { Text: "Physics" },
     { Text: "ENGD" },
     { Text: "FMC" },
     { Text: "BCEM" },
-    { Text: "Civil" },
-    { Text: "Mechanics" }
+    { Text: "Mechanics" },
+    { Text: "Chemistry" },
+    { Text: "PMPS" }
   ];
   
   export default topSearch;
