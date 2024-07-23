@@ -36,7 +36,6 @@ const Navbar = () => {
                     <Link href='Home' className='links'>Home</Link>
                     <Link href='About' className='links'>About</Link>
                     <Link href='https://forms.gle/9vXyyTC5Zo3T1RLa7' className='links'>Contribute</Link>
-                    <Link href='#' className='links'>Github</Link>
                     <i className="ri-menu-line" onClick={toggleMenu}></i>
                 </div>
             </nav>
@@ -45,7 +44,6 @@ const Navbar = () => {
                     <li><Link href='Home' onClick={toggleMenu}>Home</Link></li>
                     <li><Link href='About' onClick={toggleMenu}>About</Link></li>
                     <li><Link href='https://forms.gle/9vXyyTC5Zo3T1RLa7' onClick={toggleMenu}>Contribute</Link></li>
-                    <li><Link href='#' onClick={toggleMenu}>Github</Link></li>
                 </ul>
             </div>
             {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
