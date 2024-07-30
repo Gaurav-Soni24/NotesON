@@ -1,9 +1,11 @@
 .resultCard{
     height: auto;
-    width: 390px;
+    width: 370px;
     border: 2px solid black;
     border-radius: 20px;
     padding: 5px;
+    background: rgb(252, 250, 224);
+    text-align: center;
 }
 .resultCard h1{
     font-size: 1.8vmax;
